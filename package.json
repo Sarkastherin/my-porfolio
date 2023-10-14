@@ -6,7 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["portfolio"],
+  "keywords": [
+    "portfolio"
+  ],
   "author": "Katherin Guerrero",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+  },
+  "type": "module"
 }
