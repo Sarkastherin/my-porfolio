@@ -1,0 +1,205 @@
+/* Rest some default styles */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+/* 
+font-family: 'Raleway', sans-serif;
+font-family: 'Ubuntu Mono', monospace; */
+:root{
+    --white: #f8f8f8;
+    --midnigth-blue: #0e0024;
+    --deep-purple: #7e108e;
+    --golden-yellow: #ffde00;
+    --xl-font: calc(24px + (30 - 24) * ((100vw - 320px) / (1440 - 320)));
+    --x-font: calc(25px + (32 - 25) * ((100vw - 320px) / (1440 - 320)));
+    --sm-font: calc(16px + (18 - 16) * ((100vw - 320px) / (1440 - 320)));
+    
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Basic styling */
+body{
+    background-color: var(--white);
+    color: #333;
+    font-size: var(--sm-font);
+    font-weight: 400;
+}
+h1{
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: var(--xl-font);
+}
+h2{
+    margin-bottom: 40px;
+    color: var(--deep-purple);
+    font-family: 'Ubuntu Mono', monospace;
+}
+h3 {
+    margin: 20px 0 15px 0;
+}
+
+.about-paragraph{
+    margin-top: 20px;
+}
+.project-description{
+    font-size: 14px;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 10px;
+}
+header{
+    background: linear-gradient(90deg, var(--midnigth-blue) 0%, var(--deep-purple) 50%, var(--golden-yellow) 100%);
+    color: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+
+nav ul{
+    list-style-type: none;
+}
+nav ul li{
+    display: inline;
+    margin-right: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: var(--white);
+    transition: color 0.3s ease;
+    font-weight: 600;
+    cursor: pointer;
+}
+nav a:hover{
+    color: var(--deep-purple)
+}
+section{
+    margin: 75px 0;
+}
+.project {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.project-img{
+    max-width: 300px;
+    border: #333 1px solid;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+}
+.project img{
+    width: 100%;
+}
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.call-to-action{
+    text-align: center;
+    margin-bottom: 40px;
+    border: #b4acac 1px solid;
+    box-shadow: 0px 2px 5px var(--midnigth-blue);
+    border-radius: 5px;
+    padding: 20px 10px 30px 10px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h4 {
+    margin-bottom: 20px;
+}
+#open-form {
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: var(--deep-purple);
+    border: none;
+    font-size: medium;
+    color: var(--golden-yellow);
+    font-weight: 700;
+    width: 250px;
+    text-decoration: none;
+}
+#contact ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+    list-style-type: none;
+}
+#contact li{
+    display: grid;
+    place-items: center;
+    background: linear-gradient(180deg, var(--midnigth-blue) 0%, var(--deep-purple) 100%);
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: var(--golden-yellow);
+}
+#contact a{
+    color: var(--golden-yellow);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin-bottom: 40px;
+
+}
+footer {
+    background-color: var(--midnigth-blue);
+    color: #ddd;
+    box-shadow: 10px 20px 25px 25px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+}
+input, textarea {
+    border: var(--deep-purple) 1px solid;
+    margin: 10px 0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+.submit-btn {
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: var(--deep-purple);
+    border: none;
+    font-size: medium;
+    color: var(--golden-yellow);
+    font-weight: 700;
+    width: 250px;
+}
+.container-footer{
+     text-align: center;
+     font-size: 14px;
+}
+/* Media Query for responseviness */
+@media (max-width: 768px){
+    header{
+       padding: 10px 0; 
+    }
+    nav .container{
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul{
+        text-align: center;
+        padding-top: 10px;
+    }
+    nav a {
+        font-weight: 500;
+    }
+}
